@@ -1,0 +1,172 @@
+@import "resets";
+
+body {
+    nav {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.3rem 0.5rem;
+        z-index: 2;
+        position: fixed;
+        background-color: #000000ae;
+
+        .logo {
+            a {
+                text-decoration: none;
+                font-size: 2rem;
+                font-weight: map-get($fontweight, bold);
+                text-transform: uppercase;
+                color: $p_color;
+                padding: 0.3rem;
+            }
+        }
+
+        .links {
+            a {
+                text-decoration: none;
+                text-transform: capitalize;
+                color: $p_color;
+                font-size: 1.6rem;
+                font-weight: map-get($fontweight, regular);
+                margin: 0 5rem;
+                padding: 0.5rem;
+                transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+                &:hover {
+                    letter-spacing: 0.1rem;
+                    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                }
+            }
+        }
+
+        .icons {
+            img {
+                width: 2.8rem;
+                height: 2.8rem;
+                margin: 0 0 0 4rem;
+            }
+        }
+    }
+
+    .hero_section {
+        position: relative;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        background: linear-gradient(97deg, #000000 0%, #00000090), url("/images/banner.jpg");
+        background-size: cover;
+        background-position: center;
+
+        .container {
+            width: 70rem;
+            position: relative;
+            top: 15rem;
+            left: 2rem;
+
+            h1 {
+                font-size: 5.5rem;
+                font-weight: map-get($fontweight, 700);
+                text-transform: uppercase;
+                color: $p_color;
+            }
+
+            p {
+                font-size: 1.6rem;
+                font-weight: map-get($fontweight, regular);
+                color: $s_color;
+            }
+
+            .buttons {
+                display: flex;
+                gap: 5rem;
+                margin: 5rem 0;
+
+                a {
+                    background: $p_color;
+                    padding: 0.5rem 3rem;
+                    color: #000000;
+                    text-decoration: none;
+                    font-size: 1.6rem;
+                    font-weight: map-get($fontweight, medium);
+                    text-transform: capitalize;
+                    border-radius: 3rem;
+                    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+                    &:hover {
+                        background: none;
+                        color: #f8c822;
+                        outline: thin solid #f8c822;
+                        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                    }
+                }
+            }
+        }
+    }
+
+    .msa_container {
+        width: 100%;
+        height: 20rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        .msa {
+            width: 30rem;
+            height: 12rem;
+            //background: center  url(/images/animation.gif);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: thin solid #000;
+            border-radius: 2rem;
+            box-shadow: inset 0 0.2rem 0.4rem #000;
+            transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+            &:hover {
+                box-shadow: 0 0.2rem 0.4rem #000;
+                transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            }
+
+            &:first-child {
+                &:hover {
+                    background: url("/images/movie.gif");
+                    background-position: center;
+                    background-size: cover;
+                    opacity: 0.8;
+                }
+            }
+
+            &:nth-child(2) {
+                &:hover {
+                    background: url("/images/series.gif");
+                    background-position: center;
+                    background-size: cover;
+                    opacity: 0.8;
+                }
+            }
+
+            &:last-child {
+                &:hover {
+                    background: url("/images/animation.gif");
+                    background-position: center;
+                    background-size: cover;
+                    opacity: 0.8;
+                }
+            }
+
+            a {
+                text-decoration: none;
+                text-transform: uppercase;
+                font-size: 2.5rem;
+                font-weight: map-get($fontweight, medium);
+                color: $p_color;
+                padding: 2rem;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

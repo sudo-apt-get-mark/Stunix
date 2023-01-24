@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    background: #09090a;
+    font-family: Poppins;
+}
+
+$fontweight: (
+    "regular" : 400,
+    "medium" : 600,
+    "bold" : 700
+);
+
+$p_color: #f8c822;
+$s_color: aliceblue;

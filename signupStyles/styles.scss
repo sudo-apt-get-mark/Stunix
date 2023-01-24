@@ -1,0 +1,119 @@
+@import "resets";
+
+body {
+  .logo {
+    float: left;
+
+    a {
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 2rem;
+      font-weight: map-get($fontweight, bold);
+      color: $p_color;
+      padding: 1rem;
+    }
+  }
+
+  .form {
+    width: 43rem;
+    height: 50rem;
+    border-radius: 1rem;
+    border: thin solid #333333;
+    background: #000000a7;
+    background-blend-mode: normal;
+    position: absolute;
+    top: 5rem;
+    left: 40rem;
+  }
+
+  form {
+    width: 90%;
+    margin: auto;
+    margin-top: 6rem;
+
+    h1 {
+      color: $s_color;
+      font-size: 2rem;
+      font-weight: map-get($fontweight, medium);
+      text-transform: capitalize;
+      padding-bottom: 3rem;
+    }
+
+    input {
+      width: 93%;
+      height: 3.5rem;
+      outline: none;
+      font-size: 1.6rem;
+      font-weight: map-get($fontweight, regular);
+      padding-left: 1rem;
+      border: none;
+      border-radius: 1rem;
+      background: #333333;
+      margin-bottom: 3.5rem;
+      color: $s_color;
+      transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+      &::placeholder {
+        color: #c0c3c69c;
+        text-transform: capitalize;
+      }
+
+      &:focus {
+        width: 95%;
+        background: none;
+        color: $s_color;
+        box-shadow: 0 0.2rem 0.4rem #333333;
+        border: thin solid #333333;
+        transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+      }
+    }
+
+    button {
+      padding: 0.8rem 4rem;
+      border: none;
+      border-radius: 1rem;
+      background: #f8c822;
+      font-size: 1.6rem;
+      font-weight: map-get($fontweight, medium);
+      text-transform: capitalize;
+      margin-bottom: 3rem;
+      cursor: pointer;
+      transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+      &:hover {
+        background: none;
+        color: #f8c822;
+        outline: thin solid #f8c822;
+        transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
+      }
+    }
+    .check {
+      width: 80%;
+      height: 2rem;
+      margin-bottom: 3rem;
+
+      display: flex;
+      align-items: center;
+
+      color: $s_color;
+
+      input {
+        width: 3rem;
+        height: 1.6rem;
+        padding: 0;
+        margin: 0;
+
+        &:focus {
+          box-shadow: none;
+        }
+      }
+
+      p {
+        padding-left: 1rem;
+        color: $s_color;
+        font-size: 1.6rem;
+        font-weight: map-get($fontweight, regular);
+      }
+    }
+  }
+}

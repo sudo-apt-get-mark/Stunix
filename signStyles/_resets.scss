@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(80deg, #000000, #100f0fe6), url("/images/background.jpg");
+    background-size: cover;
+    overflow-y: auto;
+    overflow-x: hidden;
+    font-family: poppins;
+}
+
+$fontweight: (
+    "regular": 400,
+    "medium": 600,
+    "bold": 700,
+);
+
+$p_color: #f8c822;
+$s_color: aliceblue;
